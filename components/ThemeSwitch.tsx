@@ -13,12 +13,14 @@ const ThemeSwitch = () => {
         setMounted(true);
     }, [])
 
-    if (resolvedTheme === "dark") {
-        return <GrSun className='text-4xl text-[light-color]' onClick={()=> setTheme('light')}/>
-    }
-
-    if (resolvedTheme === "light") {
-        return <GrMoon className='text-4xl bg-[primary-color] text-[dark-color]' onClick={() => setTheme('dark')}/>
+    if (mounted) {
+        if (resolvedTheme === "dark") {
+            return <GrSun className='text-2xl hover:text-secondary-color text-light-color hover:cursor-pointer' onClick={()=> setTheme('light')}/>
+        }
+    
+        if (resolvedTheme === "light") {
+            return <GrMoon className='text-2xl hover:text-secondary-color text-dark-color hover:cursor-pointer' onClick={() => setTheme('dark')}/>
+        }
     }
 }
 

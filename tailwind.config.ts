@@ -16,7 +16,10 @@ const config: Config = {
       colors: {
         'light-color': '#F4F3F7',
         'dark-color': '#27252E',
+        'middle':'#8E8C93',
         'primary-color': '#4A3F7D',
+        'secondary-color': '#b0aac6',
+        // 'secondary-color': '#938BB1',
         'accent-color': '#E3B03B'
       }
     },

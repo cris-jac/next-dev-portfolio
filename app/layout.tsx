@@ -34,11 +34,12 @@ export default function RootLayout({
         className={`${josefineSans.variable} ${manjari.variable} font-sans relative`}
       >
         <ModeProvider>
-          <Background />
           <Header />
-          <main className="max-w-4xl mx-auto p-4 min-h-screen">
+          {/* <main 
+          className="max-w-4xl mx-auto p-4 min-h-screen"
+          > */}
             {children}
-          </main>
+          {/* </main> */}
         </ModeProvider>
       </body>
     </html>
