@@ -1,8 +1,18 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Josefin_Sans, Manjari } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+
+const josefineSans = Josefin_Sans({
+  subsets: ['latin'],
+  variable: '--font-josefinsans'
+})
+
+const manjari = Manjari({
+  subsets: ["latin"],
+  weight: ['100', '400', '700'],
+  variable: '--font-manjari'
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${josefineSans.variable} ${manjari.variable} font-sans`}>{children}</body>
     </html>
   );
 }
