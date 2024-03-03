@@ -8,3 +8,15 @@ export interface BannerProps {
         source?: string
     }
 }
+
+export interface ProjectProps {
+    img: any,
+    links: {
+        repositoryUrl: string,
+        demoUrl?: string
+    },
+    projectType: string,
+    techTags: string[],
+    title: string,
+    description: string
+}
