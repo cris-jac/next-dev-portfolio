@@ -39,12 +39,12 @@ const Header = () => {
 
           <button onClick={() => setIsMenuOpen(!isMenuOpen)} className='md:hidden z-40'>
             {isMenuOpen ? (
-              <GrClose className='text-2xl hover:text-secondary-color text-dark-color dark:text-light-color' />
+              <GrClose className='text-3xl hover:text-secondary-color text-dark-color dark:text-light-color' />
             ) : (
-              <GrMenu className='text-2xl hover:text-secondary-color text-dark-color dark:text-light-color' />
+              <GrMenu className='text-3xl hover:text-secondary-color text-dark-color dark:text-light-color' />
             )}
           </button>
-          <div className={`flex flex-col fixed md:hidden top-0 py-32 ${isMenuOpen ? "right-0 transition-all duration-500 ease-in-out" : "-right-[500px] hidden"} text-center w-1/2 h-screen py-4 border-secondary-color dark:border-primary-color border-l dark:bg-primary-color dark:bg-opacity-95 bg-secondary-color bg-opacity-95 backdrop-blur-sm z-30`}>
+          <div className={`flex flex-col fixed md:hidden top-0 pt-32 ${isMenuOpen ? "right-0 transition-all duration-500 ease-in-out" : "-right-[500px] hidden"} text-center w-1/2 h-screen py-4 border-secondary-color dark:border-primary-color border-l dark:bg-primary-color dark:bg-opacity-95 bg-secondary-color bg-opacity-95 backdrop-blur-sm z-30`}>
             {navLinks.map((link, index) => (
               <NavigationButton key={index} link={link} />
             ))}

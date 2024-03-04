@@ -5,7 +5,7 @@ import toast, { Toaster } from "react-hot-toast";
 import { GrMailOption } from "react-icons/gr";
 
 const ContactForm = () => {
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
   const nameRef = useRef<HTMLInputElement | null>(null);
   const emailRef = useRef<HTMLInputElement | null>(null);
@@ -30,23 +30,24 @@ const ContactForm = () => {
         if (nameRef.current) nameRef.current.value = "";
         if (emailRef.current) emailRef.current.value = "";
         if (messageRef.current) messageRef.current.value = "";
-        
+
         // console.log(res);
         toast.success("Mensaje enviado exitosamente", { id: "1" });
         return res;
       } else {
         const errorData = await res.json();
-        toast.error("Hubo un error al enviar el mensaje, intenta nuevamente", { id: "1" });
+        toast.error("Hubo un error al enviar el mensaje, intenta nuevamente", {
+          id: "1",
+        });
         throw new Error(errorData.message || "An error occurred");
         // console.log(errorData);
       }
-
     }
   };
 
   return (
     <div>
-        <Toaster />
+      <Toaster />
       <form
         onSubmit={handleSubmit}
         className="flex flex-col w-full items-center relative"
@@ -80,12 +81,9 @@ const ContactForm = () => {
             flex flex-row gap-4"
           >
             <GrMailOption className="text-2xl text-dark-color" />
-            <p className="text-2xl text-dark-color font-manjari">
-              Enviar
-            </p>
+            <p className="text-2xl text-dark-color font-manjari">Enviar</p>
           </button>
         </div>
-
       </form>
     </div>
   );

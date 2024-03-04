@@ -20,9 +20,9 @@ export default function Home() {
             </div>
 
             <div className="relative justify-center w-fit mb-32 mt-12">
-              <div className="absolute -top-10 -right-10 text-2xl font-josefin font-bold py-2.5 px-7 bg-primary-color text-light-color z-20">FRONT-END</div>
-              <div className="relative text-center w-fit text-4xl font-josefin font-bold py-5 px-14 border-primary-color border-2 dark:border-light-color bg-light-color text-primary-color z-10">WEB DEVELOPER</div>
-              <div className="absolute -bottom-10 -left-10 text-2xl font-josefin font-bold py-2.5 px-7 bg-primary-color text-light-color z-20">BACK-END</div>
+              <div className="absolute -top-10 -right-10 text-xl md:text-2xl font-josefin font-bold py-2.5 px-7 bg-primary-color text-light-color z-20">FRONT-END</div>
+              <div className="relative text-center w-fit text-2xl md:text-3xl lg:text-4xl font-josefin font-bold py-5 px-14 border-primary-color border-2 dark:border-light-color bg-light-color text-primary-color z-10">WEB DEVELOPER</div>
+              <div className="absolute -bottom-10 -left-10 text-xl md:text-2xl font-josefin font-bold py-2.5 px-7 bg-primary-color text-light-color z-20">BACK-END</div>
             </div>
           </div>
 

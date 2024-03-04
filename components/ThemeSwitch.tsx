@@ -15,11 +15,11 @@ const ThemeSwitch = () => {
 
     if (mounted) {
         if (resolvedTheme === "dark") {
-            return <GrSun className='text-2xl hover:text-secondary-color text-light-color hover:cursor-pointer z-40' onClick={()=> setTheme('light')}/>
+            return <GrSun className='text-4xl md:text-3xl hover:text-secondary-color text-light-color hover:cursor-pointer z-40' onClick={()=> setTheme('light')}/>
         }
     
         if (resolvedTheme === "light") {
-            return <GrMoon className='text-2xl hover:text-secondary-color text-dark-color hover:cursor-pointer z-40' onClick={() => setTheme('dark')}/>
+            return <GrMoon className='text-4xl md:text-3xl hover:text-secondary-color text-dark-color hover:cursor-pointer z-40' onClick={() => setTheme('dark')}/>
         }
     }
 }
