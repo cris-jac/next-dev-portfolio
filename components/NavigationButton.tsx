@@ -14,18 +14,19 @@ const NavigationButton = ({ link }: Props) => {
 
   return (
     <div
-      className="relative"
+      className="relative w-fit"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <Link href={link.path}>
-        <p className="relative font-josefinsans text-xl uppercase font-semibold z-20">
+        <p 
+        className="relative font-josefin text-dark-color dark:text-light-color md:text-xl uppercase md:font-semibold text-2xl font-bold pl-6 md:pl-0 my-6 md:my-0 w-fit z-30">
           {link.label}
         </p>
+        {isHovered && (
+          <span className="md:absolute md:bottom-0 md:mx-1  md:bg-secondary-color dark:bg-primary-color md:w-full h-3"></span>
+        )}
       </Link>
-      {isHovered && (
-        <span className="absolute bottom-0 mx-1 bg-secondary-color dark:bg-primary-color w-full h-3 z-10"></span>
-      )}
     </div>
   );
 };

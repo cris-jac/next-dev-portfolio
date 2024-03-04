@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import ModeProvider from "./provider";
 import { useTheme } from "next-themes";
 import Background from "./backgroud";
+import Footer from "@/components/Footer";
 
 const josefineSans = Josefin_Sans({
   subsets: ["latin"],
@@ -40,6 +41,7 @@ export default function RootLayout({
           > */}
             {children}
           {/* </main> */}
+          <Footer />
         </ModeProvider>
       </body>
     </html>

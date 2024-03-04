@@ -5,6 +5,8 @@ import toast, { Toaster } from "react-hot-toast";
 import { GrMailOption } from "react-icons/gr";
 
 const ContactForm = () => {
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL
+
   const nameRef = useRef<HTMLInputElement | null>(null);
   const emailRef = useRef<HTMLInputElement | null>(null);
   const messageRef = useRef<HTMLTextAreaElement | null>(null);
@@ -15,7 +17,7 @@ const ContactForm = () => {
     toast.loading("Enviando mensaje", { id: "1" });
 
     if (nameRef.current && emailRef.current && messageRef) {
-      const res = await fetch("http://localhost:3000/api/message", {
+      const res = await fetch(`${apiUrl}/api/message`, {
         method: "POST",
         body: JSON.stringify({
           name: nameRef.current.value,
