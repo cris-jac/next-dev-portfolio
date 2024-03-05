@@ -17,10 +17,10 @@ const Footer = () => {
                 <h1 className="text-right font-manjari text-sm font-bold my-1 text-light-color">Redes</h1>
                 <p className="text-right font-manjari text-xs text-light-color">Seguime en:</p>
                 <div className="flex flex-row justify-end gap-3 py-1">
-                    <a href="https://wwww.github.com" target="_blank">
+                    <a href="https://github.com/cris-jac" target="_blank">
                         <GrGithub className="text-lg text-light-color"/>
                     </a>
-                    <a href="https://wwww.linkedin.com" target="_blank">
+                    <a href="https://www.linkedin.com/in/cjac7/" target="_blank">
                         <GrLinkedin className="text-lg text-light-color"/>
                     </a>
                 </div>
