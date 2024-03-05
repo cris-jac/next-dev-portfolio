@@ -53,7 +53,7 @@ export const projectsData = [
         title: "Books API",
         img: "/booksAPI.png",
         links: {
-            repositoryUrl: "https://github.com/cris-jac/restaurantUi-React"
+            repositoryUrl: "https://github.com/cris-jac/booksApi_netMongo"
         },
         projectType: "BACK-END",
         techTags: [".NET", "MongoDB"],

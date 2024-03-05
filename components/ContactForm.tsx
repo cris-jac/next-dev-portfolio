@@ -31,7 +31,6 @@ const ContactForm = () => {
         if (emailRef.current) emailRef.current.value = "";
         if (messageRef.current) messageRef.current.value = "";
 
-        // console.log(res);
         toast.success("Mensaje enviado exitosamente", { id: "1" });
         return res;
       } else {
@@ -40,8 +39,9 @@ const ContactForm = () => {
           id: "1",
         });
         throw new Error(errorData.message || "An error occurred");
-        // console.log(errorData);
       }
+    } else {
+      toast.error("Verifique que haya ingresado todos los datos");
     }
   };
 
@@ -56,19 +56,19 @@ const ContactForm = () => {
           type="text"
           placeholder="Nombre..."
           ref={nameRef}
-          className="font-manjari placeholder:text-secondary-color bg-light-color border-primary-color border py-3 px-4 my-2 text-lg text-dark-color"
+          className="font-manjari placeholder:text-secondary-color bg-light-color border-primary-color border py-3 px-4 my-2 text-lg text-dark-color w-5/6 sm:w-[380px]"
         />
         <input
           type="text"
           placeholder="Email..."
           ref={emailRef}
-          className="font-manjari placeholder:text-secondary-color bg-light-color border-primary-color border py-3 px-4 my-2 text-lg text-dark-color"
+          className="font-manjari placeholder:text-secondary-color bg-light-color border-primary-color border py-3 px-4 my-2 text-lg text-dark-color w-5/6 sm:w-[380px]"
         />
         <textarea
           placeholder="Mensaje..."
           rows={4}
           ref={messageRef}
-          className="font-manjari placeholder:text-secondary-color bg-light-color border-primary-color border py-3 px-4 my-2 text-lg text-dark-color"
+          className="font-manjari placeholder:text-secondary-color bg-light-color border-primary-color border py-3 px-4 my-2 text-lg text-dark-color w-5/6 sm:w-[380px]"
         />
 
         <div className="relative my-4">
