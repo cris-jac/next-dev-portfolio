@@ -1,23 +1,12 @@
-// 'use client';
-
 import React from "react";
 import Background from "../backgroud";
 import TitleBanner from "@/components/TitleBanner";
-import { BannerProps } from "@/types";
-import bannerImg from "@/public/banner3.png";
 import Map from "@/components/Map";
-import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
 
-const banner: BannerProps = {
-  title: "Contacto",
-  textColor: "text-light-color",
-  bgColor: "bg-primary-color",
-  bannerPicture: {
-    alt: "banner 3",
-    ref: bannerImg,
-  },
-};
+import { bannerTitlesData } from "@/constants";
+
+const banner = bannerTitlesData[2];
 
 const Contact = () => {
   return (

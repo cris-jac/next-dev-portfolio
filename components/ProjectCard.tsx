@@ -15,18 +15,23 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
 
   return (
     <div
-      className="flex flex-col justify-center"
+      className="flex flex-col my-4"
     >
       <div
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)} 
       className="relative border-2 border-dark-color dark:border-light-color">
-        <Image
-          src={project.img}
-          alt={project.title}
-          className={`${isHovered ? "grayscale" : "grayscale-[50%] "}`}
-        />
-        <p className="absolute bottom-0 font-manjari text-sm dark:text-dark-color bg-light-color border-tr border-light-color dark:border-dark-color w-fit px-2.5 py-1">
+        <div className="relative w-full overflow-hidden h-64 sm:h-96 md:h-64">
+          <Image
+            src={project.img}
+            alt={project.title}
+            layout="fill"
+            objectFit="cover"
+            className={`${isHovered ? "grayscale blur-sm" : "grayscale-[50%]"}`}
+          />
+
+        </div>
+        <p className="absolute bottom-0 font-manjari text-sm text-light-color dark:text-dark-color bg-dark-color dark:bg-light-color border-t-2 border-r-2  w-fit px-2.5 py-1 border-dark-color dark:border-light-color">
           {project.projectType}
         </p>
 
@@ -36,7 +41,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
               <a
                 href={project.links.repositoryUrl}
                 target="_blank"
-                className="bg-light-color border-primary-color flex flex-row items-center w-fit absolute top-[25%] left-[25%] gap-4 py-2.5 px-5"
+                className="bg-light-color border-primary-color flex flex-row items-center w-fit absolute transform left-1/2 -translate-x-1/2 top-1/2 -translate-y-full gap-4 py-2.5 px-5 drop-shadow-md"
               >
                 <GrCli className="text-primary-color text-lg" />
                 <span className="text-primary-color text-lg font-manjari">
@@ -46,7 +51,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
               <a
                 href={project.links.demoUrl}
                 target="_blank"
-                className="bg-light-color border-primary-color flex flex-row items-center w-fit absolute top-[55%] left-[30%] gap-4 py-2.5 px-5"
+                className="bg-light-color border-primary-color flex flex-row items-center w-fit absolute transform left-1/2 -translate-x-1/2 top-1/2 translate-y-1/2 gap-4 py-2.5 px-5 drop-shadow-md"
               >
                 <GrView className="text-primary-color text-lg" />
                 <span className="text-primary-color text-lg font-manjari">
@@ -59,7 +64,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
               <a
                 href={project.links.repositoryUrl}
                 target="_blank"
-                className="bg-light-color border-primary-color flex flex-row items-center w-fit absolute top-[40%] left-[25%] gap-4 py-2.5 px-5"
+                className="bg-light-color border-primary-color flex flex-row items-center w-fit absolute transform left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 gap-4 py-2.5 px-5 drop-shadow-md"
               >
                 <GrCli className="text-primary-color text-lg" />
                 <span className="text-primary-color text-lg font-manjari">
