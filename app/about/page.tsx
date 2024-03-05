@@ -39,7 +39,7 @@ const About = () => {
                     <div className="absolute top-0 left-0 w-full h-full border dark:bg-primary-color bg-light-color  border-primary-color dark:border-light-color"></div>
 
                     <a
-                      href="/da_cv_2023_es.pdf"
+                      href="/CV_2024.pdf"
                       className="relative -left-1 -top-1 
                                 active:-left-0 active:-top-0
                                 px-5 py-2.5 dark:bg-light-color bg-primary-color flex flex-row items-center gap-2 z-20 w-fit
@@ -59,7 +59,7 @@ const About = () => {
                     <div className="absolute top-0 left-0 w-full h-full border dark:bg-primary-color bg-light-color  border-primary-color dark:border-light-color"></div>
 
                     <a
-                      href="/da_cv_2023_en.pdf"
+                      href="/CV_2024_EN.pdf"
                       className="relative -left-1 -top-1 
                                 active:-left-0 active:-top-0
                                 px-5 py-2.5 dark:bg-light-color bg-primary-color flex flex-row items-center gap-2 z-20 w-fit
